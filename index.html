@@ -1,6 +1,7 @@
 <html>
 
   <head>
+    <meta charset="UTF-8">
     <style>
       body{ margin: 0px; }
       
@@ -187,7 +188,6 @@
         object.traverse( function ( child ) {
           if ( child instanceof THREE.Mesh ) {
 
-            console.log( 'YES');
            // var modifier = new THREE.SubdivisionModifier( 1 );
             modelGeo = child.geometry;
             modelGeo.computeFaceNormals();
@@ -366,7 +366,6 @@
         t.updateMatrix();
         var rep = G.fingers.value;
 
-        console.log( rep );
         //var g = new THREE.Mesh( new THREE.IcosahedronGeometry( 3 , 4 ) );
         gem = new RepelerMesh( 'Parameters' , t, REPELERS , {
 
@@ -426,7 +425,6 @@
         //if( counter ==  0 ){
           
           if( VR == true ){
-            console.log('yup');
             controls.update();
           }
 
